@@ -11,14 +11,13 @@ public class ArticleDto {
     private String title;
     private String content;
 
-    public ArticleDto(Long id, String title, String content) {
-        this.id = id;
+    public ArticleDto(String title, String content) {
         this.title = title;
         this.content = content;
     }
 
     public Article toEntity() {
-        return new Article(title,content);
+        return new Article(id,title,content);
     }
 
 }
